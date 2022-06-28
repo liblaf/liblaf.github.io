@@ -1,0 +1,74 @@
+---
+---
+
+/*
+  If the number of TAB files has changed, the following variable is required.
+  And it must be defined before `@import`.
+*/
+$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
+
+@import "{{ site.theme }}";
+
+/* append your custom style below */
+
+.post-content {
+  counter-reset: h2;
+
+  h2::before {
+    counter-increment: h2;
+    content: counter(h2) ". ";
+  }
+
+  h2 {
+    counter-reset: h3;
+  }
+
+  h3::before {
+    counter-increment: h3;
+    content: counter(h2) "." counter(h3) ". ";
+  }
+
+  h3 {
+    counter-reset: h4;
+  }
+
+  h4::before {
+    counter-increment: h4;
+    content: counter(h2) "." counter(h3) "." counter(h4) ". ";
+  }
+
+  h4 {
+    counter-reset: h5;
+  }
+
+  h5::before {
+    counter-increment: h5;
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+  }
+
+  h6 {
+    counter-reset: h6;
+  }
+
+  h6::before {
+    counter-increment: h6;
+    content: "";
+  }
+}
+
+#toc {
+  ul {
+    counter-reset: headings;
+  }
+
+  a::before {
+    counter-increment: headings;
+    content: counters(headings, ".") " ";
+  }
+}
+
+span.kdmath mjx-container[jax="SVG"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
