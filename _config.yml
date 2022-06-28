@@ -203,3 +203,5 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+repository: "liblaf/liblaf.github.io"
