@@ -147,6 +147,8 @@ defaults:
       layout: post
       comments: true # Enable comments in posts.
       toc: true # Display TOC column in posts.
+      categories: "uncategorized"
+      tags: "untagged"
       math: true
       mermaid: true
       # DO NOT modify the following parameter unless you are confident enough
