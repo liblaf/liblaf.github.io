@@ -63,7 +63,7 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 
   a::before {
     counter-increment: headings;
-    content: counters(headings, ".") " ";
+    content: counters(headings, ".") ". ";
   }
 }
 
