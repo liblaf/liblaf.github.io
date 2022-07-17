@@ -91,8 +91,10 @@ tail_includes:
       {% endif %}
 
       <span id="busuanzi_container_page_pv">
-        <em>
-          <span id="busuanzi_value_page_pv"></span>
+        <em id="pv" class="pageviews">
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </span>
         </em>
         {{ site.data.locales[lang].post.pageview_measure }}
       </span>
