@@ -1,0 +1,35 @@
+---
+---
+
+/*
+  If the number of TAB files has changed, the following variable is required.
+  And it must be defined before `@import`.
+*/
+$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
+
+@import "{{ site.theme }}";
+
+/* append your custom style below */
+
+.post-content {
+  blockquote {
+    // .prompt-info
+    background-color: var(--prompt-info-bg);
+
+    // [class^="prompt-"]
+    border-left: 0;
+    border-radius: 6px;
+    padding: 0.75rem 1.2rem;
+    color: var(--prompt-text-color);
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+span.kdmath > mjx-container {
+  display: block;
+  text-align: center;
+  margin: 1rem;
+}
