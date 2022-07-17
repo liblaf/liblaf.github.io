@@ -2,6 +2,7 @@
 title: "How to Build Linux Kernel"
 category: "Linux"
 tags:
+  - "OSLAB"
   - "Linux Kernel"
   - "LLVM"
   - "Clang"
