@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="prefer-datetime-locale" content="en">
+<meta name="generator" content="Jekyll v4.2.2">
+<meta property="og:title" content="第十六章 分离变量法总结">
+<meta property="og:locale" content="en">
+<meta name="description" content="伴算符与自伴算符">
+<meta property="og:description" content="伴算符与自伴算符">
+<link rel="canonical" href="https://blog.liblaf.top/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0-%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95%E6%80%BB%E7%BB%93/">
+<meta property="og:url" content="https://blog.liblaf.top/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0-%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95%E6%80%BB%E7%BB%93/">
+<meta property="og:site_name" content="liblaf's Blog">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-06-08T00:00:00+08:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="第十六章 分离变量法总结">
+<meta name="twitter:site" content="@twitter_username"> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-06-08T00:00:00+08:00","datePublished":"2022-06-08T00:00:00+08:00","description":"伴算符与自伴算符","headline":"第十六章 分离变量法总结","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.liblaf.top/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0-%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95%E6%80%BB%E7%BB%93/"},"url":"https://blog.liblaf.top/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0-%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95%E6%80%BB%E7%BB%93/"}</script><title>第十六章 分离变量法总结 | liblaf's Blog</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="liblaf's Blog">
+<meta name="application-name" content="liblaf's Blog">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&amp;display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/auto_number.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get MODE_ATTR() { return "data-mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } static get ID() { return "mode-toggle"; } constructor() { if (this.hasMode) { if (this.isDarkMode) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } let self = this; /* always follow the system prefers */ this.sysDarkPrefers.addEventListener("change", () => { if (self.hasMode) { if (self.isDarkMode) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } self.notify(); }); } /* constructor() */ get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode === ModeToggle.DARK_MODE; } get isLightMode() { return this.mode === ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } /* get the current mode on screen */ get modeStatus() { if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer)) { return ModeToggle.DARK_MODE; } else { return ModeToggle.LIGHT_MODE; } } setDark() { $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_ATTR); sessionStorage.removeItem(ModeToggle.MODE_KEY); } /* Notify another plugins that the theme mode has changed */ notify() { window.postMessage({ direction: ModeToggle.ID, message: this.modeStatus }, "*"); } } /* ModeToggle */ const toggle = new ModeToggle(); function flipMode() { if (toggle.hasMode) { if (toggle.isSysDarkPrefer) { if (toggle.isLightMode) { toggle.clearMode(); } else { toggle.setLight(); } } else { if (toggle.isDarkMode) { toggle.clearMode(); } else { toggle.setDark(); } } } else { if (toggle.isSysDarkPrefer) { toggle.setLight(); } else { toggle.setDark(); } } toggle.notify(); } /* flipMode() */ </script>
+</head>
+<body data-spy="scroll" data-target="#toc" data-topbar-visible="true">
+<div id="sidebar" class="d-flex flex-column align-items-end">
+<div class="profile-wrapper text-center">
+<div id="avatar"> <a href="/" class="mx-auto"> <img src="https://cdn.liblaf.top/avatar-transparent.png" alt="avatar" onerror="this.style.display='none'"> </a>
+</div>
+<div class="site-title mt-3"> <a href="/">liblaf's Blog</a>
+</div>
+<div class="site-subtitle font-italic">Life blooms like a flower</div>
+</div>
+<ul class="w-100">
+<li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a>
+</li>
+<li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a>
+</li>
+<li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a>
+</li>
+<li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a>
+</li>
+<li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a>
+</li>
+</ul>
+<div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center"> <button class="mode-toggle btn" aria-label="Switch Mode"> <i class="fas fa-adjust"></i> </button> <span class="icon-border"></span> <a href="https://github.com/liblaf" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github"></i> </a> <a href="javascript:location.href%20=%20'mailto:'%20+%20%5B'liblaf','outlook.com'%5D.join('@')" aria-label="email"> <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss"> <i class="fas fa-rss"></i> </a> <a href="https://stackoverflow.com/users/18410348/liblaf" aria-label="stack-overflow" target="_blank" rel="noopener"> <i class="fab fa-stack-overflow"></i> </a>
+</div>
+</div>
+<div id="topbar-wrapper"><div id="topbar" class="container d-flex align-items-center justify-content-between h-100 pl-3 pr-3 pl-md-4 pr-md-4"> <span id="breadcrumb"> <span> <a href="/"> Home </a> </span> <span>第十六章 分离变量法总结</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div>
+<i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search..."> </span> <span id="search-cancel">Cancel</span>
+</div></div>
+<div id="main-wrapper" class="d-flex justify-content-center">
+<div id="main" class="container pl-xl-4 pr-xl-4">
+<div class="row">
+<div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pr-xl-4"><div class="post pl-1 pr-1 pl-md-2 pr-md-2">
+<h1 data-toc-skip>第十六章 分离变量法总结</h1>
+<div class="post-meta text-muted"> <span> Posted <em class="" data-ts="1654617600" data-df="ll" data-toggle="tooltip" data-placement="bottom"> Jun 8, 2022 </em> </span><div class="d-flex justify-content-between"> <span> By <em> <a href="https://github.com/liblaf">Qin Li</a> </em> </span><div> <span id="busuanzi_container_page_pv"> <em id="pv" class="pageviews"> <span id="busuanzi_value_page_pv"> <i class="fas fa-spinner fa-spin fa-fw"></i> </span> </em> views </span> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1518 words"> <em>8 min</em> read</span> <span> <em> <a href="https://github.com/liblaf/blog/tree/main/_posts/course-notes/mathematical-physics-equations/2022-06-08-%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0-%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95%E6%80%BB%E7%BB%93.md"> <i class="fas fa-eye"></i> View on GitHub </a> </em> </span>
+</div>
+</div>
+</div>
+<div class="post-content">
+<h2 id="伴算符与自伴算符">
+<span class="mr-2">伴算符与自伴算符</span><a href="#%E4%BC%B4%E7%AE%97%E7%AC%A6%E4%B8%8E%E8%87%AA%E4%BC%B4%E7%AE%97%E7%AC%A6" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<h3 id="1">
+<span class="mr-2">1.</span><a href="#1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p>设 $\hat{L}$ 和 $\hat{M}$ 为定义在一定函数空间内的线性 (微分) 算符, 若对于该函数空间内的任意函数 $u$ 和 $v$, 恒有 <span class="kdmath">$\begin{equation} \qty(v, \hat{L} u) = \qty(\hat{M} v, u) \qq{即} \int_a^b v^* \hat{L} u \dd{x} = \int_a^b \qty(\hat{M} v)^* u \dd{x}, \tag{1} \label{eq-16-1} \end{equation}$</span> 则称 $\hat{M}$ 是 $\hat{L}$ 的 <strong>伴算符</strong>.</p>
+<p>反之, $\hat{L}$ 也是 $\hat{M}$ 的伴算符.</p>
+<h3 id="2">
+<span class="mr-2">2.</span><a href="#2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p>若算符 $\hat{L}$ 的伴算符就是自身, 则称 $\hat{L}$ 是 <strong>自伴算符</strong>. 这是有 <span class="kdmath">$\begin{equation} \qty(v, \hat{L} u) = \qty(\hat{L} v, u) \qq{即} \int_a^b v^* \hat{L} u \dd{x} = \int_a^b \qty(\hat{L} v)^* u \dd{x}. \tag{2} \label{eq-16-2} \end{equation}$</span></p>
+<h2 id="自伴算符本征值问题的基本性质">
+<span class="mr-2">自伴算符本征值问题的基本性质</span><a href="#%E8%87%AA%E4%BC%B4%E7%AE%97%E7%AC%A6%E6%9C%AC%E5%BE%81%E5%80%BC%E9%97%AE%E9%A2%98%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>前提是自伴算符的本粧值问题是否有解?</p>
+<p>需要区别正则的与奇异的两种情形: 如果算符的定义域是无界或半无界区间, 或者区间的端点是方程的奇点, 则此本征值问题是奇异的, 否则就属于正则的本征值问题.</p>
+<p>在可分的 Hilbert 空间内, 正则的自律算符本征值问题一定有解, 而且本征值是离散的 (因而构成可数集).</p>
+<p>对于奇异的自伴算符, 其本征值问题则不一定有解, 即使有解, 也可能是连续谱, 或者离散谱与连续谱二者兼而有之.</p>
+<p>在自伴算符本征值问题有解的前提下, 求得的本征值与本征函数具有下列性质:</p>
+<h3 id="1-1">
+<span class="mr-2">(1)</span><a href="#1-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p>自伴算符的本征值必为实数.</p>
+<h3 id="2-1">
+<span class="mr-2">(2)</span><a href="#2-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p>自伴算符的本征函数具有正交性, 即对应不同本征值的本征函数一定正交.</p>
+<h3 id="3">
+<span class="mr-2">(3)</span><a href="#3" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p>自伴算符的本征函数 (的全体) 构成一个完备函数组, 即任意一个在区间 $\comm{a}{b}$ 中有连续二阶导数, 旦满足和自伴算符 $\hat{L}$ 相同的边界条件的函数 $f\qty(x)$, 均可按本征函数 $\qty{y_n\qty(x)}$ 展开为绝对而且一致收敛的级数 <span class="kdmath">$\begin{equation} f\qty(x) = \sum_{n = 1}^{\infty} c_n y_n\qty(x), \tag{3a} \label{eq-16-3a} \end{equation}$</span> 其中 <span class="kdmath">$\begin{equation} c_n = \frac{\int_a^b f\qty(x) y_n^*\qty(x) \dd x}{\int_a^b y_n\qty(x) y_n^*\qty(x) \dd x}. \tag{3b} \label{eq-16-3b} \end{equation}$</span> 上述展开条件还可以放宽为: 对于在 $\comm{a}{b}$ 中平方可积的任意函数, $\eqref{eq-16-3a}$ 在平均收敛 <span class="kdmath">$\begin{equation} \lim_{N \to \infty} \int_a^b \abs{f\qty(x) - \sum_{n = 1}^N c_n y_n\qty(x)}^2 \dd x = 0 \tag{3c} \label{eq-16-3c} \end{equation}$</span> 的意义下仍然成立, 其展开系数仍为 $\eqref{eq-16-3c}$.</p>
+<h2 id="sturm--liouville-型方程的本征值问题">
+<span class="mr-2">Sturm – Liouville 型方程的本征值问题</span><a href="#sturm--liouville-%E5%9E%8B%E6%96%B9%E7%A8%8B%E7%9A%84%E6%9C%AC%E5%BE%81%E5%80%BC%E9%97%AE%E9%A2%98" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<h3 id="1-2">
+<span class="mr-2">1.</span><a href="#1-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p>Sturm -– Liouville 型方程 <span class="kdmath">$\dv{x}\qty[p\qty(x) \dv{y}{x}] + \qty[\lambda \rho\qty(x) - q\qty(x)] y = 0 \qc a &lt; x &lt; b \nonumber$</span> 在边界条件 <span class="kdmath">$\eval{p\qty(x) \qty(y_1^* \dv{y_2}{x} - y_2 \dv{y_1^*}{x})}_a^b = 0 \nonumber$</span> 下构成自伴算符的本征值问题, 其中 $\lambda$ 为参数, $\rho\qty(x)$ 为权函数.</p>
+<p>使此问题有非零解的 $\lambda$ 值称为本征值, 相应的非零解称为本征函数 (以下相同).</p>
+<h3 id="在常见的-sturm--liouville-型方程中-pqtyx-qqtyx-和-rhoqtyx-均满足以下条件">
+<span class="mr-2">在常见的 Sturm – Liouville 型方程中, $p\qty(x)$, $q\qty(x)$ 和 $\rho\qty(x)$ 均满足以下条件:</span><a href="#%E5%9C%A8%E5%B8%B8%E8%A7%81%E7%9A%84-sturm--liouville-%E5%9E%8B%E6%96%B9%E7%A8%8B%E4%B8%AD-pqtyx-qqtyx-%E5%92%8C-rhoqtyx-%E5%9D%87%E6%BB%A1%E8%B6%B3%E4%BB%A5%E4%B8%8B%E6%9D%A1%E4%BB%B6" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<ol>
+<li>$p\qty(x) \geqslant 0$, 但不恒为 0, 并且只在边界点 ($a$, 或 $b$, 或 $a$ 和 $b$) 可能为 0.</li>
+<li>$\rho\qty(x) \geqslant 0$, 但不恒为 0.</li>
+<li>$q\qty(x) \geqslant 0$, 且 $q\qty(x) / p \qty(x)$ 在 $\comm{a}{b}$ 中, 除 $a$, $b$ 两点可能是不超过二阶的极点外, 是实的连续函数.</li>
+</ol>
+<h3 id="sturm--liouville-型方程本征值问题的基本类型">
+<span class="mr-2">Sturm – Liouville 型方程本征值问题的基本类型</span><a href="#sturm--liouville-%E5%9E%8B%E6%96%B9%E7%A8%8B%E6%9C%AC%E5%BE%81%E5%80%BC%E9%97%AE%E9%A2%98%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<h4 id="与第一二三类边界条件构成的本征值问题">
+<span class="mr-2">与第一、二、三类边界条件构成的本征值问题</span><a href="#%E4%B8%8E%E7%AC%AC%E4%B8%80%E4%BA%8C%E4%B8%89%E7%B1%BB%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6%E6%9E%84%E6%88%90%E7%9A%84%E6%9C%AC%E5%BE%81%E5%80%BC%E9%97%AE%E9%A2%98" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h4>
+<div class="kdmath">$$ \begin{gather*} \dv{x}\qty[p\qty(x) \dv{y\qty(x)}{x}] + \qty[\lambda \rho\qty(x) - \qty(x)] y\qty(x) = 0 \qc x \in \qty(a, b), \\ \alpha_1 y'\qty(a) - \beta_1 y\qty(a) = 0 \qc \alpha_2 y'\qty(b) + \beta_2 y\qty(b) = 0, \end{gather*} $$</div>
+<p>其中 $\alpha_1$, $\beta_1$, $\alpha_2$, $\beta_2$ 均为非负常数, 且 $\alpha_1$, $\beta_1$ 不同时为零, $\alpha_2$, $\beta_2$ 不同时为零.</p>
+<h4 id="存在有界条件时的本征值问题">
+<span class="mr-2">存在有界条件时的本征值问题</span><a href="#%E5%AD%98%E5%9C%A8%E6%9C%89%E7%95%8C%E6%9D%A1%E4%BB%B6%E6%97%B6%E7%9A%84%E6%9C%AC%E5%BE%81%E5%80%BC%E9%97%AE%E9%A2%98" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h4>
+<p>例如, <span class="kdmath">$\begin{gather*} \dv{x}\qty[p\qty(x) \dv{y\qty(x)}{x}] + \qty[\lambda \rho\qty(x) - q\qty(x)] y\qty(x) \qc x \in \qty(a, b), \\ y\qty(a) ~ \text{有界} \qc \alpha_2 y'\qty(b) + \beta_2 y\qty(b) = 0. \end{gather*}$</span> 出现此类本征值问题的前提条件是 $p\qty(a) = 0$, $x = a$ 是方程的正则奇点, 且方程在 $x = a$ 点有一个解是发散的, 这是需加入一个有界条件, 将此解剔除.</p>
+<p>若 $p\qty(b) = 0$ 或 $p\qty(a) = p\qty(b) = 0$, 可做类似处理.</p>
+<h4 id="存在周期条件时的本征值问题">
+<span class="mr-2">存在周期条件时的本征值问题</span><a href="#%E5%AD%98%E5%9C%A8%E5%91%A8%E6%9C%9F%E6%9D%A1%E4%BB%B6%E6%97%B6%E7%9A%84%E6%9C%AC%E5%BE%81%E5%80%BC%E9%97%AE%E9%A2%98" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h4>
+<div class="kdmath">$$ \begin{gather*} \dv{x}\qty[p\qty(x) \dv{y\qty(x)}{x}] + \qty[\lambda \rho\qty(x) - q\qty(x)] y\qty(x) = 0 \qc x \in \qty(a, b), \\ y\qty(a) = y\qty(b) \qc y'\qty(a) = y'\qty(b). \end{gather*} $$</div>
+<p>出现此本征值问题的条件是 $p\qty(a) = p\qty(b)$, $q\qty(a) = q\qty(b)$, $\rho\qty(a) = \rho\qty(b)$.</p>
+<h2 id="几种常见的-sturm--liouville-型方程">
+<span class="mr-2">几种常见的 Sturm – Liouville 型方程</span><a href="#%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84-sturm--liouville-%E5%9E%8B%E6%96%B9%E7%A8%8B" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<h3 id="xqtyx--lambda-xqtyx-0-或-phiqtyphi--mu-phiqtyphi--0">
+<span class="mr-2">$X''\qty(x) + \lambda X\qty(x)= 0$ 或 $\Phi''\qty(\phi) + \mu \Phi\qty(\phi) = 0$</span><a href="#xqtyx--lambda-xqtyx-0-%E6%88%96-phiqtyphi--mu-phiqtyphi--0" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<p>在这类方程中, $p\qty(x) = 1$, $q\qty(x) = 0$, 权函数 $\rho\qty(x) = 1$, 两方程中的待定参数为 $\lambda$ 或 $\mu$.</p>
+<h3 id="bessel-方程">
+<span class="mr-2">Bessel 方程</span><a href="#bessel-%E6%96%B9%E7%A8%8B" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<div class="kdmath">$$ \frac{1}{r} \dv{r}\qty[r \dv{R\qty(r)}{r}] + \qty(k^2 - \frac{m^2}{r^2}) R\qty(r) = 0, \nonumber $$</div>
+<p>在此方程中, $p\qty(r) = r$, $q\qty(r) = \frac{m^2}{r}$, 权函数 $\rho\qty(r) = r$, 参数为 $k^2$.</p>
+<h3 id="球-bessel-方程">
+<span class="mr-2">球 Bessel 方程</span><a href="#%E7%90%83-bessel-%E6%96%B9%E7%A8%8B" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<div class="kdmath">$$ \frac{1}{r^2} \dv{r}\qty[r^2 \dv{R\qty(r)}{r}] + \qty[k^2 - \frac{l \qty(l + 1)}{r^2}] R\qty(r) = 0, \nonumber $$</div>
+<p>在此方程中, $p\qty(r) = r^2$, $q\qty(r) = l \qty(l + 1)$, 权函数 $\rho\qty(r) = r^2$, 参数为 $k^2$.</p>
+<h3 id="连带-legendre-方程">
+<span class="mr-2">连带 Legendre 方程</span><a href="#%E8%BF%9E%E5%B8%A6-legendre-%E6%96%B9%E7%A8%8B" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h3>
+<div class="kdmath">$$ \frac{1}{\sin\theta} \dv{\theta}\qty[\sin\theta \dv{\Theta\qty(\theta)}{\theta}] + \qty(\lambda - \frac{m^2}{\sin[2]{\theta}}) \Theta\qty(\theta) = 0, \nonumber $$</div>
+<p>在此方程中, $p\qty(\theta) = \sin\theta$, $q\qty(\theta) = \frac{m^2}{\sin\theta}$, 权函数 $\rho\qty(\theta) = \sin\theta$, 参数为 $\lambda$.</p>
+<p>做变换 $\cos\theta = x$, $\Theta\qty(\theta) = y\qty(x)$ 可得到连带 Legendre 方程的另一个标准形式 <span class="kdmath">$\dv{x}\qty[\qty(1 - x^2) \dv{y}{x}] + \qty(\lambda - \frac{m^2}{1 - x^2}) = 0, \nonumber$</span> 这时 $p\qty(x) = 1 - x^2$, $q\qty(x) = \frac{m^2}{1 - x^2}$, 权函数 $\rho\qty(x) = 1$, 参数仍为 $\lambda$.</p>
+<h2 id="sturm--liouville-型方程本征值问题的退化现象">
+<span class="mr-2">Sturm – Liouville 型方程本征值问题的退化现象</span><a href="#sturm--liouville-%E5%9E%8B%E6%96%B9%E7%A8%8B%E6%9C%AC%E5%BE%81%E5%80%BC%E9%97%AE%E9%A2%98%E7%9A%84%E9%80%80%E5%8C%96%E7%8E%B0%E8%B1%A1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>
+</h2>
+<p>在边界条件 <span class="kdmath">$\eval{p\qty(x) \qty(y_1^* \dv[2]{y_2}{x} - y_2 \dv[2]{y_1^*}{x})}_a = \eval{p\qty(x) \qty(y_1^* \dv[2]{y_2}{x} - y_2 \dv[2]{y_1^*}{x})}_b = 0 \nonumber$</span> 下, Sturm – Liouville 型方程 <span class="kdmath">$\dv{x}\qty[p\qty(x) \dv{y}{x}] + \qty[\lambda \rho\qty(x) - q\qty(x)] = 0 \qc a &lt; x &lt; b \nonumber$</span> 的本征值问题是非退化的, 即对应于一个本征值, 只有一个本征函数; 只在周期条件下, 对应于一个本征值, 才可能有两个本征函数; 这两个本征函数可能正交, 也可能不正交, 但是通过正交化步骤, 总可以将对应于同一本征值的两个本征函数正交化.</p>
+</div>
+<div class="post-tail-wrapper text-muted">
+<div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href="/categories/course-notes/">Course Notes</a>, <a href="/categories/mathematical-physics-equations/">Mathematical Physics Equations</a>
+</div>
+<div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/untagged/" class="post-tag no-text-decoration">untagged</a>
+</div>
+<div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+<div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/"> CC BY 4.0 </a> by the author.</div>
+<div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0+%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95%E6%80%BB%E7%BB%93+-+liblaf%27s+Blog&amp;url=https%3A%2F%2Fblog.liblaf.top%2Fcourse-notes%2Fmathematical-physics-equations%2F2022%2F06%2F08%2F%25E7%25AC%25AC%25E5%258D%2581%25E5%2585%25AD%25E7%25AB%25A0-%25E5%2588%2586%25E7%25A6%25BB%25E5%258F%2598%25E9%2587%258F%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2F" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0+%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95%E6%80%BB%E7%BB%93+-+liblaf%27s+Blog&amp;u=https%3A%2F%2Fblog.liblaf.top%2Fcourse-notes%2Fmathematical-physics-equations%2F2022%2F06%2F08%2F%25E7%25AC%25AC%25E5%258D%2581%25E5%2585%25AD%25E7%25AB%25A0-%25E5%2588%2586%25E7%25A6%25BB%25E5%258F%2598%25E9%2587%258F%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2F" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://t.me/share/url?url=https%3A%2F%2Fblog.liblaf.top%2Fcourse-notes%2Fmathematical-physics-equations%2F2022%2F06%2F08%2F%25E7%25AC%25AC%25E5%258D%2581%25E5%2585%25AD%25E7%25AB%25A0-%25E5%2588%2586%25E7%25A6%25BB%25E5%258F%2598%25E9%2587%258F%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2F&text=%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0+%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95%E6%80%BB%E7%BB%93+-+liblaf%27s+Blog" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.liblaf.top%2Fcourse-notes%2Fmathematical-physics-equations%2F2022%2F06%2F08%2F%25E7%25AC%25AC%25E5%258D%2581%25E5%2585%25AD%25E7%25AB%25A0-%25E5%2588%2586%25E7%25A6%25BB%25E5%258F%2598%25E9%2587%258F%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2F" data-toggle="tooltip" data-placement="top" title="Linkedin" target="_blank" rel="noopener" aria-label="Linkedin"> <i class="fa-fw fab fa-linkedin"></i> </a> <a href="http://service.weibo.com/share/share.php?title=%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0+%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95%E6%80%BB%E7%BB%93+-+liblaf%27s+Blog&amp;url=https%3A%2F%2Fblog.liblaf.top%2Fcourse-notes%2Fmathematical-physics-equations%2F2022%2F06%2F08%2F%25E7%25AC%25AC%25E5%258D%2581%25E5%2585%25AD%25E7%25AB%25A0-%25E5%2588%2586%25E7%25A6%25BB%25E5%258F%2598%25E9%2587%258F%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2F" data-toggle="tooltip" data-placement="top" title="Weibo" target="_blank" rel="noopener" aria-label="Weibo"> <i class="fa-fw fab fa-weibo"></i> </a> <i id="copy-link" class="fa-fw fas fa-link small" data-toggle="tooltip" data-placement="top" title="Copy link" data-title-succeed="Link copied successfully!"> </i> </span>
+</div>
+</div>
+</div>
+</div></div>
+<div id="panel-wrapper" class="col-xl-3 pl-2 text-muted">
+<div class="access">
+<div id="access-lastmod" class="post">
+<div class="panel-heading">Recently Updated</div>
+<ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/linux/2022/01/26/how-to-build-linux-kernel/">How to Build Linux Kernel</a></li></ul>
+</div>
+<div id="access-tags">
+<div class="panel-heading">Trending Tags</div>
+<div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/hpc/">HPC</a> <a class="post-tag" href="/tags/bomb-lab/">Bomb Lab</a> <a class="post-tag" href="/tags/oslab/">OSLAB</a> <a class="post-tag" href="/tags/untagged/">untagged</a> <a class="post-tag" href="/tags/linux-kernel/">Linux Kernel</a> <a class="post-tag" href="/tags/linux-device-drivers/">Linux Device Drivers</a> <a class="post-tag" href="/tags/attack-lab/">Attack Lab</a> <a class="post-tag" href="/tags/cuda/">CUDA</a> <a class="post-tag" href="/tags/mpi/">MPI</a> <a class="post-tag" href="/tags/char-drivers/">Char Drivers</a>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script><div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+<div class="panel-heading pl-3 pt-2 mb-2">Contents</div>
+<nav id="toc" data-toggle="toc"></nav>
+</div>
+</div>
+</div>
+<div class="row"><div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 pl-3 pr-3 pr-xl-4">
+<div id="related-posts" class="mt-5 mb-2 mb-sm-4">
+<h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3>
+<div class="card-deck mb-4">
+<div class="card"> <a href="/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E6%AD%A3%E4%BA%A4%E6%9B%B2%E9%9D%A2%E5%9D%90%E6%A0%87%E7%B3%BB/"><div class="card-body"> <em class="small" data-ts="1654617600" data-df="ll"> Jun 8, 2022 </em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>第十三章 正交曲面坐标系</h3>
+<div class="text-muted small"><p> 正交曲面坐标系中的问分算符表达式 设正交曲面坐标系的三个坐标为 $\xi_1$, $\xi_2$, $\xi_3$, 其孤元 $\dd s$ 为 $\dd{s}^2 = \sum_{i = 1}^3 H_i^2 \dd{\xi_i}^2, \nonumber$ 其中 $H_i$ 是此正交曲面坐标系的度规, 一般是 $\xi_1$, $\xi_2$, $\xi_3$ 的函数. 它可以通过直角...</p></div>
+</div></a>
+</div>
+<div class="card"> <a href="/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0-%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95/"><div class="card-body"> <em class="small" data-ts="1654617600" data-df="ll"> Jun 8, 2022 </em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>第十二章 分离变量法</h3>
+<div class="text-muted small"><p> 对含时间的 $n$ 维空间的齐次问题 这里指的是 齐次方程 与 齐次边界条件 问题, 包括例如二维或三维热传导问题和波动问题. 偏微分方程是齐次的, 在空间 $n$ 个方向上的边界条件也都是齐次的, 它们可以是: 一、二、三类边界条件; 周期条件; 有界条件等. 求解含时间的 $n$ 维空间齐次问题的主要步骤: 分离变量 用乘积形式的特解代入齐次偏微分方程和齐次边界条件, 分离出 $...</p></div>
+</div></a>
+</div>
+<div class="card"> <a href="/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E4%BA%94%E7%AB%A0-%E6%9F%B1%E5%87%BD%E6%95%B0/"><div class="card-body"> <em class="small" data-ts="1654617600" data-df="ll"> Jun 8, 2022 </em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>第十五章 柱函数</h3>
+<div class="text-muted small"><p> Bessel 方程的来源 Helmholtz 方程在柱坐标系下分离变量, 可得 $\begin{equation} \frac{1}{r} \dv{r}(r \dv{R}{r}) + \qty(\lambda - \frac{\nu^2}{r^2}) R = 0, \tag{1} \label{eq-15-1} \end{equation}$ 当 $\lambda \neq 0$ ...</p></div>
+</div></a>
+</div>
+</div>
+</div>
+<div class="post-navigation d-flex justify-content-between"> <a href="/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E5%85%AB%E7%AB%A0-green%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95/" class="btn btn-outline-primary" prompt="Older"><p>第十八章 Green 函数方法</p></a> <a href="/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-%E7%90%83%E5%87%BD%E6%95%B0/" class="btn btn-outline-primary" prompt="Newer"><p>第十四章 球函数</p></a>
+</div>
+<script type="text/javascript"> $(function () { const origin = "https://giscus.app"; const iframe = "iframe.giscus-frame"; const lightTheme = "light"; const darkTheme = "dark_dimmed"; let initTheme = lightTheme; if ($("html[data-mode=dark]").length > 0 || ($("html[data-mode]").length == 0 && window.matchMedia("(prefers-color-scheme: dark)").matches)) { initTheme = darkTheme; } let giscusAttributes = { "src": "https://giscus.app/client.js", "data-repo": "liblaf/blog", "data-repo-id": "R_kgDOHkfdiA", "data-category": "General", "data-category-id": "DIC_kwDOHkfdiM4CP6eD", "data-mapping": "pathname", "data-reactions-enabled": "1", "data-emit-metadata": "0", "data-theme": initTheme, "data-input-position": "top", "data-lang": "en", "crossorigin": "anonymous", "async": "" }; let giscusScript = document.createElement("script"); Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value)); document.getElementById("tail-wrapper").appendChild(giscusScript); addEventListener("message", (event) => { if (event.source === window && event.data && event.data.direction === ModeToggle.ID) { /* global theme mode changed */ const mode = event.data.message; const theme = (mode === ModeToggle.DARK_MODE ? darkTheme : lightTheme); const message = { setConfig: { theme: theme } }; const giscus = document.querySelector(iframe).contentWindow; giscus.postMessage({ giscus: message }, origin); } }); }); </script>
+</div></div>
+<footer class="row pl-3 pr-3"><div class="col-12 d-flex justify-content-between align-items-center text-muted pl-0 pr-0">
+<div class="footer-left"> <span id="busuanzi_container_site_pv"> <b class="pageviews"> <span id="busuanzi_value_site_pv"> <i class="fas fa-spinner fa-spin fa-fw"></i> </span> </b> site views </span><p class="mb-0"> © 2022 <a href="https://github.com/liblaf">Qin Li</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p>
+</div>
+<div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> theme.</p></div>
+</div></footer>
+</div>
+<div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content">
+<div id="search-hints"><div id="access-tags">
+<div class="panel-heading">Trending Tags</div>
+<div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/hpc/">HPC</a> <a class="post-tag" href="/tags/bomb-lab/">Bomb Lab</a> <a class="post-tag" href="/tags/oslab/">OSLAB</a> <a class="post-tag" href="/tags/untagged/">untagged</a> <a class="post-tag" href="/tags/linux-kernel/">Linux Kernel</a> <a class="post-tag" href="/tags/linux-device-drivers/">Linux Device Drivers</a> <a class="post-tag" href="/tags/attack-lab/">Attack Lab</a> <a class="post-tag" href="/tags/cuda/">CUDA</a> <a class="post-tag" href="/tags/mpi/">MPI</a> <a class="post-tag" href="/tags/char-drivers/">Char Drivers</a>
+</div>
+</div></div>
+<div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+</div></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js"></script> <script> $(function() { function updateMermaid(event) { if (event.source === window && event.data && event.data.direction === ModeToggle.ID) { const mode = event.data.message; if (typeof mermaid === "undefined") { return; } let expectedTheme = (mode === ModeToggle.DARK_MODE? "dark" : "default"); let config = { theme: expectedTheme }; /* Re-render the SVG › <https://github.com/mermaid-js/mermaid/issues/311#issuecomment-332557344> */ $(".mermaid").each(function() { let svgCode = $(this).prev().children().html(); $(this).removeAttr("data-processed"); $(this).html(svgCode); }); mermaid.initialize(config); mermaid.init(undefined, ".mermaid"); } } let initTheme = "default"; if ($("html[data-mode=dark]").length > 0 || ($("html[data-mode]").length == 0 && window.matchMedia("(prefers-color-scheme: dark)").matches ) ) { initTheme = "dark"; } let mermaidConf = { theme: initTheme /* <default|dark|forest|neutral> */ }; /* Markdown converts to HTML */ $("pre").has("code.language-mermaid").each(function() { let svgCode = $(this).children().html(); $(this).addClass("unloaded"); $(this).after(`<div class=\"mermaid\">${svgCode}</div>`); }); mermaid.initialize(mermaidConf); window.addEventListener("message", updateMermaid); }); </script><div id="mask"></div>
+<a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a><div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-animation="true" data-autohide="false">
+<div class="toast-header"> <button type="button" class="ml-2 ml-auto close" data-dismiss="toast" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+</div>
+<div class="toast-body text-center pt-0">
+<p class="pl-2 pr-2 mb-3">A new version of content is available.</p>
+<button type="button" class="btn btn-primary" aria-label="Update"> Update </button>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No results found.</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script> <script src="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1/dist/jquery.magnific-popup.min.js,npm/lozad/dist/lozad.min.js,npm/clipboard@2/dist/clipboard.min.js"></script> <script src="https://cdn.jsdelivr.net/combine/npm/dayjs@1/dayjs.min.js,npm/dayjs@1/locale/en.min.js,npm/dayjs@1/plugin/relativeTime.min.js,npm/dayjs@1/plugin/localizedFormat.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script src="/assets/js/math.js" defer></script> <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg-full.js" defer></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script> <script defer src="/app.js"></script> <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"> </script>
+</body>
+</html>

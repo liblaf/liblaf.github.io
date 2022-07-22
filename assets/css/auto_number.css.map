@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "auto_number.css",
+	"sources": [
+		"auto_number.scss"
+	],
+	"sourcesContent": [
+		".post-content {\n  counter-reset: h2 h3 h4 h5;\n\n  h2::before {\n    counter-increment: h2;\n    content: counter(h2) \". \";\n  }\n\n  h2 {\n    counter-reset: h3;\n  }\n\n  h3::before {\n    counter-increment: h3;\n    content: counter(h2) \".\" counter(h3) \". \";\n  }\n\n  h3 {\n    counter-reset: h4;\n  }\n\n  h4::before {\n    counter-increment: h4;\n    content: counter(h2) \".\" counter(h3) \".\" counter(h4) \". \";\n  }\n\n  h4 {\n    counter-reset: h5;\n  }\n\n  h5::before {\n    counter-increment: h5;\n    content: counter(h2) \".\" counter(h3) \".\" counter(h4) \".\" counter(h5) \". \";\n  }\n}\n\n#toc {\n  ul {\n    counter-reset: headings;\n  }\n\n  a::before {\n    counter-increment: headings;\n    content: counters(headings, \".\") \". \";\n  }\n}\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,aAAa,AAAC,CACZ,aAAa,CAAE,WAAW,CAiC3B,AAlCD,AAGE,aAHW,CAGX,EAAE,EAAE,MAAM,AAAC,CACT,iBAAiB,CAAE,EAAE,CACrB,OAAO,CAAE,WAAW,CAAC,IAAI,CAC1B,AANH,AAQE,aARW,CAQX,EAAE,AAAC,CACD,aAAa,CAAE,EAAE,CAClB,AAVH,AAYE,aAZW,CAYX,EAAE,EAAE,MAAM,AAAC,CACT,iBAAiB,CAAE,EAAE,CACrB,OAAO,CAAE,WAAW,CAAC,GAAG,CAAC,WAAW,CAAC,IAAI,CAC1C,AAfH,AAiBE,aAjBW,CAiBX,EAAE,AAAC,CACD,aAAa,CAAE,EAAE,CAClB,AAnBH,AAqBE,aArBW,CAqBX,EAAE,EAAE,MAAM,AAAC,CACT,iBAAiB,CAAE,EAAE,CACrB,OAAO,CAAE,WAAW,CAAC,GAAG,CAAC,WAAW,CAAC,GAAG,CAAC,WAAW,CAAC,IAAI,CAC1D,AAxBH,AA0BE,aA1BW,CA0BX,EAAE,AAAC,CACD,aAAa,CAAE,EAAE,CAClB,AA5BH,AA8BE,aA9BW,CA8BX,EAAE,EAAE,MAAM,AAAC,CACT,iBAAiB,CAAE,EAAE,CACrB,OAAO,CAAE,WAAW,CAAC,GAAG,CAAC,WAAW,CAAC,GAAG,CAAC,WAAW,CAAC,GAAG,CAAC,WAAW,CAAC,IAAI,CAC1E,AAGH,AACE,IADE,CACF,EAAE,AAAC,CACD,aAAa,CAAE,QAAQ,CACxB,AAHH,AAKE,IALE,CAKF,CAAC,EAAE,MAAM,AAAC,CACR,iBAAiB,CAAE,QAAQ,CAC3B,OAAO,CAAE,uBAAuB,CAAC,IAAI,CACtC"
+}

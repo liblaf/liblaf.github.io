@@ -1,0 +1,3 @@
+.post-content{counter-reset:h2 h3 h4 h5}.post-content h2::before{counter-increment:h2;content:counter(h2) ". "}.post-content h2{counter-reset:h3}.post-content h3::before{counter-increment:h3;content:counter(h2) "." counter(h3) ". "}.post-content h3{counter-reset:h4}.post-content h4::before{counter-increment:h4;content:counter(h2) "." counter(h3) "." counter(h4) ". "}.post-content h4{counter-reset:h5}.post-content h5::before{counter-increment:h5;content:counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "}#toc ul{counter-reset:headings}#toc a::before{counter-increment:headings;content:counters(headings, ".") ". "}
+
+/*# sourceMappingURL=auto_number.css.map */

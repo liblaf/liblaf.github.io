@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="prefer-datetime-locale" content="en">
+<meta name="generator" content="Jekyll v4.2.2">
+<meta property="og:title" content="Archives">
+<meta property="og:locale" content="en">
+<meta name="description" content="Life blooms like a flower">
+<meta property="og:description" content="Life blooms like a flower">
+<link rel="canonical" href="https://blog.liblaf.top/archives/">
+<meta property="og:url" content="https://blog.liblaf.top/archives/">
+<meta property="og:site_name" content="liblaf's Blog">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-07-22T22:08:00+08:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Archives">
+<meta name="twitter:site" content="@twitter_username"> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-22T22:08:00+08:00","datePublished":"2022-07-22T22:08:00+08:00","description":"Life blooms like a flower","headline":"Archives","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.liblaf.top/archives/"},"url":"https://blog.liblaf.top/archives/"}</script><title>Archives | liblaf's Blog</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="liblaf's Blog">
+<meta name="application-name" content="liblaf's Blog">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&amp;display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css">
+<link rel="stylesheet" href="/assets/css/style.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get MODE_ATTR() { return "data-mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } static get ID() { return "mode-toggle"; } constructor() { if (this.hasMode) { if (this.isDarkMode) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } let self = this; /* always follow the system prefers */ this.sysDarkPrefers.addEventListener("change", () => { if (self.hasMode) { if (self.isDarkMode) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } self.notify(); }); } /* constructor() */ get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode === ModeToggle.DARK_MODE; } get isLightMode() { return this.mode === ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } /* get the current mode on screen */ get modeStatus() { if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer)) { return ModeToggle.DARK_MODE; } else { return ModeToggle.LIGHT_MODE; } } setDark() { $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_ATTR); sessionStorage.removeItem(ModeToggle.MODE_KEY); } /* Notify another plugins that the theme mode has changed */ notify() { window.postMessage({ direction: ModeToggle.ID, message: this.modeStatus }, "*"); } } /* ModeToggle */ const toggle = new ModeToggle(); function flipMode() { if (toggle.hasMode) { if (toggle.isSysDarkPrefer) { if (toggle.isLightMode) { toggle.clearMode(); } else { toggle.setLight(); } } else { if (toggle.isDarkMode) { toggle.clearMode(); } else { toggle.setDark(); } } } else { if (toggle.isSysDarkPrefer) { toggle.setLight(); } else { toggle.setDark(); } } toggle.notify(); } /* flipMode() */ </script>
+</head>
+<body data-spy="scroll" data-target="#toc" data-topbar-visible="true">
+<div id="sidebar" class="d-flex flex-column align-items-end">
+<div class="profile-wrapper text-center">
+<div id="avatar"> <a href="/" class="mx-auto"> <img src="https://cdn.liblaf.top/avatar-transparent.png" alt="avatar" onerror="this.style.display='none'"> </a>
+</div>
+<div class="site-title mt-3"> <a href="/">liblaf's Blog</a>
+</div>
+<div class="site-subtitle font-italic">Life blooms like a flower</div>
+</div>
+<ul class="w-100">
+<li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a>
+</li>
+<li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a>
+</li>
+<li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a>
+</li>
+<li class="nav-item active"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a>
+</li>
+<li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a>
+</li>
+</ul>
+<div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center"> <button class="mode-toggle btn" aria-label="Switch Mode"> <i class="fas fa-adjust"></i> </button> <span class="icon-border"></span> <a href="https://github.com/liblaf" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github"></i> </a> <a href="javascript:location.href%20=%20'mailto:'%20+%20%5B'liblaf','outlook.com'%5D.join('@')" aria-label="email"> <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss"> <i class="fas fa-rss"></i> </a> <a href="https://stackoverflow.com/users/18410348/liblaf" aria-label="stack-overflow" target="_blank" rel="noopener"> <i class="fab fa-stack-overflow"></i> </a>
+</div>
+</div>
+<div id="topbar-wrapper"><div id="topbar" class="container d-flex align-items-center justify-content-between h-100 pl-3 pr-3 pl-md-4 pr-md-4"> <span id="breadcrumb"> <span> <a href="/"> Home </a> </span> <span>Archives</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Archives</div>
+<i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search..."> </span> <span id="search-cancel">Cancel</span>
+</div></div>
+<div id="main-wrapper" class="d-flex justify-content-center">
+<div id="main" class="container pl-xl-4 pr-xl-4">
+<div class="row">
+<div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pr-xl-4"><div class="post pl-1 pr-1 pl-md-2 pr-md-2">
+<h1 class="dynamic-title"> Archives</h1>
+<div class="post-content"><div id="archives" class="pl-xl-2"> <span class="lead">2022</span><ul class="list-unstyled">
+<li><div> <span class="date day" data-ts="1658246400" data-df="DD"> 20 </span> <span class="date month small text-muted" data-ts="1658246400" data-df="MMM"> Jul </span> <a href="/development-environment/2022/07/20/run-tencent-meeting-on-ubuntu-22.04/">Run Tencent Meeting on Ubuntu 22.04</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1657900800" data-df="DD"> 16 </span> <span class="date month small text-muted" data-ts="1657900800" data-df="MMM"> Jul </span> <a href="/android/2022/07/16/build-ijkplayer-with-clang/">Build ijkplayer with Clang</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1657728000" data-df="DD"> 14 </span> <span class="date month small text-muted" data-ts="1657728000" data-df="MMM"> Jul </span> <a href="/development-environment/2022/07/14/failed-to-build-ruby-2.7.6-on-ubuntu-22.04/">Failed To Build Ruby 2.7.6 on Ubuntu 22.04</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1655740800" data-df="DD"> 21 </span> <span class="date month small text-muted" data-ts="1655740800" data-df="MMM"> Jun </span> <a href="/course-work/introduction-to-high-performance-computing/2022/06/21/pa4-%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5-%E7%9F%A9%E9%98%B5%E4%B9%98/">PA4: 稀疏矩阵-矩阵乘</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1654617600" data-df="DD"> 08 </span> <span class="date month small text-muted" data-ts="1654617600" data-df="MMM"> Jun </span> <a href="/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-%E7%90%83%E5%87%BD%E6%95%B0/">第十四章 球函数</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1654617600" data-df="DD"> 08 </span> <span class="date month small text-muted" data-ts="1654617600" data-df="MMM"> Jun </span> <a href="/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0-%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95%E6%80%BB%E7%BB%93/">第十六章 分离变量法总结</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1654617600" data-df="DD"> 08 </span> <span class="date month small text-muted" data-ts="1654617600" data-df="MMM"> Jun </span> <a href="/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E5%85%AB%E7%AB%A0-green%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95/">第十八章 Green 函数方法</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1654617600" data-df="DD"> 08 </span> <span class="date month small text-muted" data-ts="1654617600" data-df="MMM"> Jun </span> <a href="/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E4%BA%94%E7%AB%A0-%E6%9F%B1%E5%87%BD%E6%95%B0/">第十五章 柱函数</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1654617600" data-df="DD"> 08 </span> <span class="date month small text-muted" data-ts="1654617600" data-df="MMM"> Jun </span> <a href="/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0-%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95/">第十二章 分离变量法</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1654617600" data-df="DD"> 08 </span> <span class="date month small text-muted" data-ts="1654617600" data-df="MMM"> Jun </span> <a href="/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E6%AD%A3%E4%BA%A4%E6%9B%B2%E9%9D%A2%E5%9D%90%E6%A0%87%E7%B3%BB/">第十三章 正交曲面坐标系</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1654617600" data-df="DD"> 08 </span> <span class="date month small text-muted" data-ts="1654617600" data-df="MMM"> Jun </span> <a href="/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E4%B8%83%E7%AB%A0-%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2%E7%9A%84%E5%BA%94%E7%94%A8/">第十七章 积分变换的应用</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1654617600" data-df="DD"> 08 </span> <span class="date month small text-muted" data-ts="1654617600" data-df="MMM"> Jun </span> <a href="/course-notes/mathematical-physics-equations/2022/06/08/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E7%A8%8B%E5%92%8C%E5%AE%9A%E8%A7%A3%E6%9D%A1%E4%BB%B6/">第十一章 数学物理方程和定解条件</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1654444800" data-df="DD"> 06 </span> <span class="date month small text-muted" data-ts="1654444800" data-df="MMM"> Jun </span> <a href="/course-work/computer-organization-and-architecture/2022/06/06/malloc-lab/">Malloc Lab</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1654358400" data-df="DD"> 05 </span> <span class="date month small text-muted" data-ts="1654358400" data-df="MMM"> Jun </span> <a href="/course-work/introduction-to-high-performance-computing/2022/06/05/pa3-%E5%85%A8%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF/">PA3: 全源最短路</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1654358400" data-df="DD"> 05 </span> <span class="date month small text-muted" data-ts="1654358400" data-df="MMM"> Jun </span> <a href="/course-work/introduction-to-high-performance-computing/2022/06/05/exp8-%E5%8D%95%E6%9C%BA%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">exp8: 单机性能优化</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1653235200" data-df="DD"> 23 </span> <span class="date month small text-muted" data-ts="1653235200" data-df="MMM"> May </span> <a href="/course-work/introduction-to-high-performance-computing/2022/05/23/exp7-cuda-%E4%BC%98%E5%8C%96-global-memory-shared-memory/">exp7: CUDA 优化 (global memory, shared memory)</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1653235200" data-df="DD"> 23 </span> <span class="date month small text-muted" data-ts="1653235200" data-df="MMM"> May </span> <a href="/course-work/computer-organization-and-architecture/2022/05/23/cache-lab/">Cache Lab: Understanding Cache Memories</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1652716800" data-df="DD"> 17 </span> <span class="date month small text-muted" data-ts="1652716800" data-df="MMM"> May </span> <a href="/course-work/introduction-to-high-performance-computing/2022/05/17/pa2-%E6%A8%A1%E6%9D%BF%E8%AE%A1%E7%AE%97/">PA2: 模板计算</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1652371200" data-df="DD"> 13 </span> <span class="date month small text-muted" data-ts="1652371200" data-df="MMM"> May </span> <a href="/linux/2022/05/13/linux-device-drivers-time-delays-and-deferred-work/">Linux Device Drivers | Time, Delays, and Deferred Work</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1652371200" data-df="DD"> 13 </span> <span class="date month small text-muted" data-ts="1652371200" data-df="MMM"> May </span> <a href="/linux/2022/05/13/linux-device-drivers-concurrency-and-race-conditions/">Linux Device Drivers | Concurrency and Race Conditions</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1652371200" data-df="DD"> 13 </span> <span class="date month small text-muted" data-ts="1652371200" data-df="MMM"> May </span> <a href="/linux/2022/05/13/linux-device-drivers-char-drivers/">Linux Device Drivers | Char Drivers</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1652371200" data-df="DD"> 13 </span> <span class="date month small text-muted" data-ts="1652371200" data-df="MMM"> May </span> <a href="/linux/2022/05/13/linux-device-drivers-char-drivers-the-file-structure/">Linux Device Drivers | Char Drivers | The file Structure</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1652371200" data-df="DD"> 13 </span> <span class="date month small text-muted" data-ts="1652371200" data-df="MMM"> May </span> <a href="/linux/2022/05/13/linux-device-drivers-char-drivers-file-operations/">Linux Device Drivers | Char Drivers | File Operations</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1652371200" data-df="DD"> 13 </span> <span class="date month small text-muted" data-ts="1652371200" data-df="MMM"> May </span> <a href="/linux/2022/05/13/linux-device-drivers-building-and-running-modules/">Linux Device Drivers | Building and Running Modules</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1652371200" data-df="DD"> 13 </span> <span class="date month small text-muted" data-ts="1652371200" data-df="MMM"> May </span> <a href="/linux/2022/05/13/linux-device-drivers-allocating-memory/">Linux Device Drivers | Allocating Memory</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1650902400" data-df="DD"> 26 </span> <span class="date month small text-muted" data-ts="1650902400" data-df="MMM"> Apr </span> <a href="/course-work/introduction-to-high-performance-computing/2022/04/26/exp6-cuda-%E5%B9%B6%E8%A1%8C%E7%AD%96%E7%95%A5/">exp6: CUDA 并行策略</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1650643200" data-df="DD"> 23 </span> <span class="date month small text-muted" data-ts="1650643200" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/23/phase-5/">Attack Lab: Phase 5</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1650643200" data-df="DD"> 23 </span> <span class="date month small text-muted" data-ts="1650643200" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/23/phase-4/">Attack Lab: Phase 4</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1650643200" data-df="DD"> 23 </span> <span class="date month small text-muted" data-ts="1650643200" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/23/phase-3/">Attack Lab: Phase 3</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1650643200" data-df="DD"> 23 </span> <span class="date month small text-muted" data-ts="1650643200" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/23/phase-2/">Attack Lab: Phase 2</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1650643200" data-df="DD"> 23 </span> <span class="date month small text-muted" data-ts="1650643200" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/23/phase-1/">Attack Lab: Phase 1</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1649520000" data-df="DD"> 10 </span> <span class="date month small text-muted" data-ts="1649520000" data-df="MMM"> Apr </span> <a href="/latex/2022/04/10/how-to-use-more-than-10-columns-in-matrix/">How To Use More Than 10 Columns in Matrix</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1649520000" data-df="DD"> 10 </span> <span class="date month small text-muted" data-ts="1649520000" data-df="MMM"> Apr </span> <a href="/course-work/introduction-to-high-performance-computing/2022/04/10/pa1-odd_even_sort/">PA1: 奇偶排序（odd_even_sort）</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1649001600" data-df="DD"> 04 </span> <span class="date month small text-muted" data-ts="1649001600" data-df="MMM"> Apr </span> <a href="/course-work/introduction-to-high-performance-computing/2022/04/04/exp4-%E8%87%AA%E5%8A%A8%E5%90%91%E9%87%8F%E5%8C%96%E4%B8%8E%E5%9F%BA%E4%BA%8E-intrinsic-%E7%9A%84%E6%89%8B%E5%8A%A8%E5%90%91%E9%87%8F%E5%8C%96/">exp4: 自动向量化与基于 intrinsic 的手动向量化</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1649001600" data-df="DD"> 04 </span> <span class="date month small text-muted" data-ts="1649001600" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/04/strings_not_equal/">Bomb Lab: strings not equal</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1649001600" data-df="DD"> 04 </span> <span class="date month small text-muted" data-ts="1649001600" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/04/string_length/">Bomb Lab: string length</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1649001600" data-df="DD"> 04 </span> <span class="date month small text-muted" data-ts="1649001600" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/04/read_six_numbers/">Bomb Lab: read six numbers</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1649001600" data-df="DD"> 04 </span> <span class="date month small text-muted" data-ts="1649001600" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/04/phase_6/">Bomb Lab: Phase 6</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1649001600" data-df="DD"> 04 </span> <span class="date month small text-muted" data-ts="1649001600" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/04/phase_5/">Bomb Lab: Phase 5</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1649001600" data-df="DD"> 04 </span> <span class="date month small text-muted" data-ts="1649001600" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/04/phase_4/">Bomb Lab: Phase 4</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1649001600" data-df="DD"> 04 </span> <span class="date month small text-muted" data-ts="1649001600" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/04/phase_3/">Bomb Lab: Phase 3</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1649001600" data-df="DD"> 04 </span> <span class="date month small text-muted" data-ts="1649001600" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/04/phase_2/">Bomb Lab: Phase 2</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1649001600" data-df="DD"> 04 </span> <span class="date month small text-muted" data-ts="1649001600" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/04/phase_1/">Bomb Lab: Phase 1</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1649001600" data-df="DD"> 04 </span> <span class="date month small text-muted" data-ts="1649001600" data-df="MMM"> Apr </span> <a href="/course-work/computer-organization-and-architecture/2022/04/04/bomb-lab/">Bomb Lab</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1648396800" data-df="DD"> 28 </span> <span class="date month small text-muted" data-ts="1648396800" data-df="MMM"> Mar </span> <a href="/course-work/introduction-to-high-performance-computing/2022/03/28/exp3-%E6%B5%8B%E9%87%8F-openmp-%E5%B9%B6%E8%A1%8C-for-%E5%BE%AA%E7%8E%AF%E4%B8%8D%E5%90%8C%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5%E7%9A%84%E6%80%A7%E8%83%BD/">exp3: 测量 OpenMP 并行 for 循环不同调度策略的性能</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1647792000" data-df="DD"> 21 </span> <span class="date month small text-muted" data-ts="1647792000" data-df="MMM"> Mar </span> <a href="/course-work/introduction-to-high-performance-computing/2022/03/21/exp2-mpi-allreduce/">exp2: MPI Allreduce</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1647705600" data-df="DD"> 20 </span> <span class="date month small text-muted" data-ts="1647705600" data-df="MMM"> Mar </span> <a href="/course-work/computer-organization-and-architecture/2022/03/20/data-lab/">Data Lab: Manipulating Bits</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1647273600" data-df="DD"> 15 </span> <span class="date month small text-muted" data-ts="1647273600" data-df="MMM"> Mar </span> <a href="/course-work/introduction-to-high-performance-computing/2022/03/15/exp1-mpi-%E5%BC%82%E6%AD%A5%E9%80%9A%E4%BF%A1/">exp1: MPI 异步通信</a>
+</div></li>
+<li><div> <span class="date day" data-ts="1643126400" data-df="DD"> 26 </span> <span class="date month small text-muted" data-ts="1643126400" data-df="MMM"> Jan </span> <a href="/linux/2022/01/26/how-to-build-linux-kernel/">How to Build Linux Kernel</a>
+</div></li>
+</ul>
+<span class="lead">2021</span><ul class="list-unstyled"><li><div> <span class="date day" data-ts="1630684800" data-df="DD"> 04 </span> <span class="date month small text-muted" data-ts="1630684800" data-df="MMM"> Sep </span> <a href="/demo/2021/09/04/mathjax-v3-with-tex-input-and-svg-output/">MathJax v3 with TeX input and SVG output</a>
+</div></li></ul>
+<span class="lead">2004</span><ul class="list-unstyled"><li><div> <span class="date day" data-ts="1103212800" data-df="DD"> 17 </span> <span class="date month small text-muted" data-ts="1103212800" data-df="MMM"> Dec </span> <a href="/demo/2004/12/17/sample-markdown/">Sample Markdown</a>
+</div></li></ul>
+</div></div>
+</div></div>
+<div id="panel-wrapper" class="col-xl-3 pl-2 text-muted"><div class="access">
+<div id="access-lastmod" class="post">
+<div class="panel-heading">Recently Updated</div>
+<ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/linux/2022/01/26/how-to-build-linux-kernel/">How to Build Linux Kernel</a></li></ul>
+</div>
+<div id="access-tags">
+<div class="panel-heading">Trending Tags</div>
+<div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/hpc/">HPC</a> <a class="post-tag" href="/tags/bomb-lab/">Bomb Lab</a> <a class="post-tag" href="/tags/oslab/">OSLAB</a> <a class="post-tag" href="/tags/untagged/">untagged</a> <a class="post-tag" href="/tags/linux-kernel/">Linux Kernel</a> <a class="post-tag" href="/tags/linux-device-drivers/">Linux Device Drivers</a> <a class="post-tag" href="/tags/attack-lab/">Attack Lab</a> <a class="post-tag" href="/tags/cuda/">CUDA</a> <a class="post-tag" href="/tags/mpi/">MPI</a> <a class="post-tag" href="/tags/char-drivers/">Char Drivers</a>
+</div>
+</div>
+</div></div>
+</div>
+<footer class="row pl-3 pr-3"><div class="col-12 d-flex justify-content-between align-items-center text-muted pl-0 pr-0">
+<div class="footer-left"> <span id="busuanzi_container_site_pv"> <b class="pageviews"> <span id="busuanzi_value_site_pv"> <i class="fas fa-spinner fa-spin fa-fw"></i> </span> </b> site views </span><p class="mb-0"> © 2022 <a href="https://github.com/liblaf">Qin Li</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p>
+</div>
+<div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> theme.</p></div>
+</div></footer>
+</div>
+<div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content">
+<div id="search-hints"><div id="access-tags">
+<div class="panel-heading">Trending Tags</div>
+<div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/hpc/">HPC</a> <a class="post-tag" href="/tags/bomb-lab/">Bomb Lab</a> <a class="post-tag" href="/tags/oslab/">OSLAB</a> <a class="post-tag" href="/tags/untagged/">untagged</a> <a class="post-tag" href="/tags/linux-kernel/">Linux Kernel</a> <a class="post-tag" href="/tags/linux-device-drivers/">Linux Device Drivers</a> <a class="post-tag" href="/tags/attack-lab/">Attack Lab</a> <a class="post-tag" href="/tags/cuda/">CUDA</a> <a class="post-tag" href="/tags/mpi/">MPI</a> <a class="post-tag" href="/tags/char-drivers/">Char Drivers</a>
+</div>
+</div></div>
+<div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+</div></div>
+</div>
+<div id="mask"></div>
+<a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a><div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-animation="true" data-autohide="false">
+<div class="toast-header"> <button type="button" class="ml-2 ml-auto close" data-dismiss="toast" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+</div>
+<div class="toast-body text-center pt-0">
+<p class="pl-2 pr-2 mb-3">A new version of content is available.</p>
+<button type="button" class="btn btn-primary" aria-label="Update"> Update </button>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No results found.</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script> <script src="https://cdn.jsdelivr.net/combine/npm/dayjs@1/dayjs.min.js,npm/dayjs@1/locale/en.min.js,npm/dayjs@1/plugin/relativeTime.min.js,npm/dayjs@1/plugin/localizedFormat.min.js"></script> <script defer src="/assets/js/dist/misc.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script> <script defer src="/app.js"></script> <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"> </script>
+</body>
+</html>
