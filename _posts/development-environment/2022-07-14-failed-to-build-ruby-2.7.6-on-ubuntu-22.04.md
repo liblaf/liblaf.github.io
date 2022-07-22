@@ -5,6 +5,7 @@ tags:
   - "Ruby"
   - "rbenv"
   - "Ubuntu"
+  - "Ubuntu 22.04"
   - "Homebrew"
 ---
 
